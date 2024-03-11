@@ -1,0 +1,18 @@
+.book {
+  background-color: red;
+}
+#pen {
+  color: green;
+}
+.items p {
+  color: yellow;
+}
+#animal span {
+  background-color: pink;
+}
+div .animal {
+  color: blue;
+}
+div > .parag {
+  background-color: green;
+}
