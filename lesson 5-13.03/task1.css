@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200;
+  margin: 0 auto;
+  font-weight: bold;
+  font-style: normal;
+}
+nav ul li {
+  display: inline-block;
+  justify-content: space-between;
+  margin: 25px;
+}
+.hearder {
+  display: flex;
+
+  justify-content: space-between;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header div h1 a {
+  text-decoration: none;
+  color: black;
+}
+header div h1 {
+  margin: 10px;
+}
+header {
+  background-color: white;
+}
+#banner {
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.8) 0%,
+      rgba(92, 77, 66, 0.8) 100%
+    ),
+    url("/bg-masthead.jpg");
+  width: 100%;
+  height: 100vh;
+}
+#banner .banner h1 {
+  text-align: center;
+  padding-top: 300px;
+  font-size: 80;
+  font-family: "Tilt Neon", sans-serif;
+  color: white;
+}
+#banner .banner p {
+  color: white;
+  padding: 60px;
+  font-size: 20px;
+}
+hr {
+  border: 1px solid red;
+  width: 60px;
+  margin: auto;
+  margin-top: 80px;
+}
+.banner {
+  text-align: center;
+}
+#banner .banner button {
+  width: 250px;
+  height: 80px;
+  border-radius: 50px;
+  background-color: rgb(202, 82, 82);
+  border: none;
+  color: white;
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#services {
+  padding: 3rem 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services .cards {
+  display: flex;
+  gap: 2rem;
+}
+#services h1 {
+  text-align: center;
+  padding: 3rem 0;
+}
+.cards .card {
+  text-align: center;
+  padding: 2rem;
+}
+.cards .card h2 {
+  margin: 20px;
+}
+.hr {
+  border: 3px solid red;
+  border-top: 1px solid black;
+  width: 6%;
+  margin: 30px auto;
+}
+
+i {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #f4623a;
+}
+.services .cards p {
+  opacity: 0.5;
+}
+#contact {
+  width: 100%;
+  height: 100vh;
+}
+#contact h1,
+p {
+  text-align: center;
+}
