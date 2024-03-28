@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+.box {
+  width: 100%;
+  padding: 35px 0;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  gap: 30px;
+  font-family: serif;
+  color: white;
+  font-size: 30px;
+}
+
+.box2 {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  gap: 30px;
+}
+.right {
+  width: 50%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.two {
+  display: flex;
+  gap: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+  .right {
+    width: 100%;
+  }
+  .right .box {
+    background-color: red;
+  }
+  .left .box {
+    background-color: red;
+  }
+  .left {
+    width: 100%;
+  }
+
+  .box2 {
+    width: 50%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .left {
+    flex-direction: column;
+  }
+.two .box2{
+    width: 100%;
+  }
+}

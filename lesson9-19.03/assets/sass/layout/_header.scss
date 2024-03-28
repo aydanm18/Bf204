@@ -1,0 +1,32 @@
+header {
+    background-color: black;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        img{
+        width: 170px;
+        height: 60px;
+    }
+
+        ul {
+            display: flex;
+            column-gap: 40px;
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: white;
+
+                }
+            }
+        }
+    }
+
+    
+}

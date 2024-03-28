@@ -1,0 +1,26 @@
+.div1 {
+  height: 25%;
+  border: 10px solid red;
+  background-color: pink;
+  margin: 20px 10px 20px 10px;
+  transition: all 0.5s ease;
+}
+.div2 {
+  border: 10px solid blue;
+  margin: 40px 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.5s ease;
+}
+.div1:hover {
+  background-color: red;
+  border-color: blue;
+}
+.div2:hover {
+  background-color: blue;
+  border-color: white;
+}

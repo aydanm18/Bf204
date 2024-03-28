@@ -1,0 +1,65 @@
+.boxes {
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  height: 800px;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 2s ease;
+  color: white;
+  font-weight: bold;
+  font-family: serif;
+  font-size: 23px;
+}
+
+.box p {
+  display: none;
+}
+
+.box:hover p {
+  display: block;
+}
+
+.box:hover h2 {
+  display: none;
+}
+
+.box:first-child {
+  width: 700px;
+  height: 280px;
+  background-color: red;
+}
+.box:nth-child(2) {
+  width: 700px;
+  height: 280px;
+  background-color: green;
+}
+.box:nth-child(3) {
+  width: 700px;
+  height: 280px;
+  background-color: blue;
+}
+.box:last-child {
+  width: 700px;
+  height: 280px;
+  background-color: orange;
+}
+.box:first-child:hover {
+  transform: scale(2);
+}
+.box:nth-child(2):hover {
+  transform: translate(200px, -200px) scale(0.6);
+}
+.box:nth-child(3):hover {
+  transform: rotate(360deg) scale(2);
+}
+.box:last-child:hover {
+  transform: skewX(30deg) scale(0.6);
+}

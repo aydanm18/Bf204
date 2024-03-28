@@ -1,0 +1,60 @@
+.container {}
+
+body {
+  height: 200vh;
+}
+.boxes {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background-color: aqua;
+  border: 2px solid green;
+}
+
+.box {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+.box2 {
+  top: 50px;
+  left: 40px;
+  background-color: gray;
+  opacity: 0.7;
+  z-index: 1;
+}
+.box4 {
+  position: sticky;
+  top: 0;
+  left: 100%;
+  background-color: red;
+}
+.box6 {
+  top: calc(50% - 30px);
+  position: fixed;
+  background-color: red;
+  right: 0;
+}
+.box1 {
+  background-color: red;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.box3 {
+  position: absolute;
+  background-color: green;
+  bottom: 20%;
+  right: 200px;
+}
+.box5{
+    background-color: yellow;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+}
