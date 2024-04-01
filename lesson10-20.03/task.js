@@ -30,8 +30,16 @@
 //  let result=1 / 2 (kat1 * kat2);
 //  console.log(result);
 
+ const num=21;
+ let q=parseInt(num/7)
+ if(num%7==0){
+console.log("number divided by 7");
+ }
+ else
+ {
+   
 
-
+ }
 
 
 
