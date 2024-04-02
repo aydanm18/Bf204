@@ -50,13 +50,6 @@
 // console.log(getCapatalizeWord("biz kenan mellimin telebeleriyik"));
 
 
-// function volumeOfBox(arr) {
-
-
-// }
-// console.log(volumeOfBox([2, undefined ,9,-5,-4,"AzerBayCan",true,12, null,"Baku",NaN,182,4])); //10
-
-
 
 // function volumeOfBox(str1, str2) {
 //     str1 = str1.split("").sort();
@@ -74,15 +67,36 @@
 //         if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
 //             result.push(str[i]);
 //         }
-        
+
 //     }
 //     return result
 // }
 // console.log(volumeOfBox("saaaaaalhhhhham"));
 
 
+function createPerson(name, surname, age, callbackFn,callbackFn2) {
+    let person = {
+        name,
+        surname,
+        age
+    }
+    callbackFn(person)
+    callbackFn2(person)
+    return person;
+}
+
+function getFullName(person) {
+    console.log(person.name + ' ' + person.surname);
+}
+
+function getBirthYear(person) {
+
+    console.log(new Date().getFullYear()-person.age);
+}
+
+createPerson('jim', 'kerry', 54, getFullName,getBirthYear)
 
 
-
-
-
+function getWord(str) {
+    
+}
