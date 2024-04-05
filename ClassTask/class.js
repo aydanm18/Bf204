@@ -150,6 +150,7 @@ let users = [
         31
     ),
 ];
+console.log(users);
 
 function sortUsersByUsername(array) {
     return array.sort((a, b) => a.username - b.username);
@@ -158,22 +159,22 @@ function sortUsersByUsername(array) {
 function filterByBirthYear(userArray, year) {
     return userArray.filter((element) => element.getBirthYear > year);
 }
-function Login(userArray, username, password) {
+function login(userArray, username, password) {
 
 }
-function LogOut(userArray, username, password) {
+function logOut(userArray, username, password) {
 
 }
-function CreateUser(array, user) {
+function charactersreateUser(array, user) {
     array.push(user);
     return array;
 }
-function DeleteUser(array, username) {
+function deleteUser(array, username) {
     let del = array.findIndex((element) => element.username === username);
 }
 console.log(sortUsersByUsername(users));
 console.log(filterByBirthYear(users));
-console.log(Login(users));
-console.log(LogOut(users));
-console.log(CreateUser(users))
-console.log(DeleteUser(users));
+console.log(login(users));
+console.log(logOut(users));
+console.log(createUser(users))
+console.log(deleteUser(users));
