@@ -16,8 +16,8 @@ const Header = () => {
             <div id={styles["header-top"]}>
                 <div className="container">
                     <div className={styles["header-top"]}>
-                        <a className={styles.tel}  href="#">
-                            <FaPhoneAlt  />
+                        <a className={styles.tel} href="#">
+                            <FaPhoneAlt />
                             +748 383 23 14
                         </a>
                         <nav>
@@ -40,7 +40,7 @@ const Header = () => {
             <div id={styles["header-middle"]}>
                 <div className="container">
                     <div className={styles["header-middle"]}>
-                        <h1 className={styles.logo}>ChicCharry</h1>
+                        <h4 className={styles.logo}>ChicCharry</h4>
                         <div className={styles.search}>
                             <input
                                 type="text"

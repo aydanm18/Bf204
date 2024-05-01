@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 #banner-section {
     background-color: #FFE2E0;
-    padding: 1rem 0;
 
     .banner-section {
 
@@ -10,31 +11,17 @@
 
         .banner-left {
             h3 {
-                width: 88px;
-                height: 41px;
                 font-size: 24px;
                 font-weight: 700;
-                line-height: 40.8px;
                 color: red;
-                margin-bottom: 1rem;
-            }
-
-            h1 {
-                margin-bottom: 1rem;
+                line-height: 2;
             }
 
             p {
-                max-width: 453px;
-                max-height: 81px;
-                margin-bottom: 2rem;
                 color: #212121BF;
-                font-family: Poppins;
+                font-family: Poppins, serif;
                 font-size: 16px;
                 font-weight: 400;
-                line-height: 27.2px;
-                text-align: left;
-
-
             }
 
             button {
@@ -50,6 +37,6 @@
 
             }
         }
-        
+
     }
 }

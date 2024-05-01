@@ -1,12 +1,16 @@
 header {
+    font-family: Poppins, serif;
+    font-size: 14px;
+
     #header-top {
+        font-size: 14px;
+        padding: 20px 0;
         background-color: #007878;
-        padding: 1rem 5rem;
 
         .header-top {
             display: flex;
             justify-content: space-between;
-            padding: 1rem 0;
+            align-items: center;
 
             .tel {
                 text-decoration: none;
@@ -17,8 +21,10 @@ header {
             }
 
             nav {
+
                 ul {
                     display: flex;
+                    margin: 0 !important;
                     gap: 30px;
                     text-decoration: none;
                     color: white;
@@ -41,10 +47,9 @@ header {
     }
 
     #header-middle {
-        padding: 1rem 5rem;
 
         .header-middle {
-            padding: 1rem 0;
+            padding: 30px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -55,20 +60,19 @@ header {
                 .search-icon {
                     position: absolute;
                     right: 10px;
-                    top: 18px;
-                    font-size: 1rem;
+                    top: 6px;
+
                     color: gray;
                 }
 
                 input {
-                    height: 50px;
-                    padding: 10px;
+                    padding: 5px 10px;
                     width: 400px;
                     background-color: #f7f9fc;
                     outline: none;
-                    border: 1px solid rgba(128, 128, 128, 0.288);
                     border-radius: 10px;
-
+                    font-size: 12px;
+                    border: transparent;
                 }
             }
 
@@ -85,16 +89,22 @@ header {
     }
 
     #header-bottom {
+        font-family: Poppins, serif;
+        font-size: 14px;
+
         .header-bottom {
-            padding: 1rem 0;
+
             display: flex;
             font-family: sans-serif;
 
             nav {
+                padding: 20px 0;
 
                 ul {
+                    margin: 0;
+                    padding: 0;
                     display: flex;
-                    column-gap: 4rem;
+                    gap: 40px;
                     list-style: none;
 
                     a {

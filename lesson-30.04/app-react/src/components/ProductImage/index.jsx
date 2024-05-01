@@ -2,10 +2,10 @@ import React from 'react'
 
 const ProductImage = () => {
   return (
-   <>
-   <img src="../../public/images/img.png" alt="" />
-   
-   </>
+    <>
+      <img src="../../public/images/img.png" alt="" style={{ width: '100%' }} />
+
+    </>
   )
 }
 

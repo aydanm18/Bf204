@@ -14,12 +14,16 @@ const Products = () => {
     }, [])
     return (
         <div>
-            {
-                data && data.map((product) => {
-                    return <ProductCard product={product} key={product.id}/>
-                }
-                )
-            }
+            <div className="container">
+                <div id="cards" className='row'>
+                    {
+                        data && data.map((product) => {
+                            return <ProductCard product={product} key={product.id} />
+                        }
+                        )
+                    }
+                </div>
+            </div>
         </div>
     )
 }
