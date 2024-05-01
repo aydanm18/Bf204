@@ -1,0 +1,30 @@
+{
+    "movies":[
+        {
+            "id":"1",
+            "title":"Material UI",
+            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu31aDeVZpXCYzHatwbwgQvQKlE02SomudIT3RztMCGw&s",
+            "genre":"horor",
+            "release":1777,
+            "cast":[]
+        },
+        {
+            "id":"2",
+            "title":"Material UI",
+            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu31aDeVZpXCYzHatwbwgQvQKlE02SomudIT3RztMCGw&s",
+            "genre":"horor",
+            "release":1777,
+            "cast":[]
+        },
+        {
+            "id":"3",
+            "title":"Material UI",
+            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu31aDeVZpXCYzHatwbwgQvQKlE02SomudIT3RztMCGw&s",
+            "genre":"horor",
+            "release":1777,
+            "cast":[]
+        }
+    ]
+       
+    
+}
