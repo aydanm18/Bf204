@@ -1,0 +1,40 @@
+#banner3-section {
+
+    .banner3-section {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem 0;
+
+        .text {
+            width: 200px;
+            height: 120px;
+            background-color: #F5F5F5;
+            position: relative;
+            border-radius: 10px;
+
+            h4 {
+
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 30.6px;
+                padding: 1rem;
+                font-weight: 600;
+
+
+            }
+
+            img {
+                width: 100px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 10px;
+            }
+        }
+
+    }
+
+
+}

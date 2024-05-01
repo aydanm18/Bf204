@@ -1,0 +1,188 @@
+footer {
+    background-color: #F7F7F9;
+
+    #footer-top {
+        .footer-top {
+            padding: 1rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .search {
+                position: relative;
+
+                .search-icon {
+                    position: absolute;
+                    right: 10px;
+                    top: 18px;
+                    font-size: 1rem;
+                    color: gray;
+                }
+
+                input {
+                    height: 50px;
+                    padding: 10px;
+                    width: 400px;
+                    background-color: white;
+                    outline: none;
+                    border: 1px solid rgba(128, 128, 128, 0.288);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    #footer-middle {
+
+        .footer-middle {
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-around;
+
+            .footer-contact {
+                p {
+                    max-width: 329px;
+                    max-height: 81px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #212121BF;
+                    line-height: 27px;
+                    margin-bottom: 1rem;
+
+                }
+
+                a {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #212121BF;
+                    line-height: 27px;
+                     
+                    text-decoration: none;
+
+                }
+
+                button {
+                    width: 179px;
+                    height: 48px;
+                    border-radius: 8px;
+                    border: 1px solid #212121BF;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19.2px;
+
+                }
+            }
+
+            .footer-shop {
+         
+                h4 {
+                    width: 45px;
+                    height: 31px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 30.6px;
+                    color: #212121BF;
+                    margin-bottom: 1rem;
+                    
+                }
+                
+                ul {
+               padding-left: 0.2rem;
+                    li {
+                        list-style: none;
+                        padding-bottom: 1rem;
+                        
+                        a {
+                            text-decoration: none;
+                            color: #212121BF;
+                           
+                        }
+                    }
+                }
+            }
+
+            .footer-company {
+                h4 {
+                    width: 45px;
+                    height: 31px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 30.6px;
+                    margin-bottom: 1rem;
+                    color: #212121BF;
+
+                }
+
+                ul {
+                    padding-left: 0.2rem;
+                    li {
+                        list-style: none;
+                        padding-bottom: 1rem;
+
+                        a {
+                            text-decoration: none;
+                            color: #212121BF;
+                        }
+                    }
+                }
+            }
+
+            .footer-help {
+
+                h4 {
+                    width: 45px;
+                    height: 31px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 30.6px;
+                    margin-bottom: 1rem;
+                    color: #212121BF;
+
+                }
+
+                ul {
+                    padding-left: 0.2rem;
+                    li {
+                        list-style: none;
+                        padding-bottom: 1rem;
+
+                        a {
+                            text-decoration: none;
+                            color: #212121BF;
+
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    #footer-bottom{
+        background-color: white;
+        .footer-bottom{
+            padding: 1rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                color: red;
+                color: #212121BF;
+            }
+            ul{
+                display: flex;
+                column-gap: 1rem;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        font-size: 17px;
+                       color: black;
+                    }
+                }
+            }
+        }
+    }
+}

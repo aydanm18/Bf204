@@ -1,0 +1,110 @@
+header {
+    #header-top {
+        background-color: #007878;
+        padding: 1rem 5rem;
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            .tel {
+                text-decoration: none;
+                color: #f7f9fc;
+                font-family: sans-serif;
+                display: flex;
+                column-gap: 1rem;
+            }
+
+            nav {
+                ul {
+                    display: flex;
+                    gap: 30px;
+                    text-decoration: none;
+                    color: white;
+                    font-family: sans-serif;
+
+                    li {
+                        text-decoration: none;
+                        list-style: none;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #header-middle {
+        padding: 1rem 5rem;
+
+        .header-middle {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .search {
+                position: relative;
+
+                .search-icon {
+                    position: absolute;
+                    right: 10px;
+                    top: 18px;
+                    font-size: 1rem;
+                    color: gray;
+                }
+
+                input {
+                    height: 50px;
+                    padding: 10px;
+                    width: 400px;
+                    background-color: #f7f9fc;
+                    outline: none;
+                    border: 1px solid rgba(128, 128, 128, 0.288);
+                    border-radius: 10px;
+
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 2rem;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    #header-bottom {
+        .header-bottom {
+            padding: 1rem 0;
+            display: flex;
+            font-family: sans-serif;
+
+            nav {
+
+                ul {
+                    display: flex;
+                    column-gap: 4rem;
+                    list-style: none;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+
+                    }
+
+                }
+            }
+        }
+    }
+}
