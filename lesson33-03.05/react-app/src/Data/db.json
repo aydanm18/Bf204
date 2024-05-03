@@ -1,0 +1,47 @@
+{
+    "teachers": [
+      {
+        "id": "1",
+        "fullName": "Kanan Amirov",
+        "email": "kanan.amirov@code.edu.az",
+        "username": "KananAmir",
+        "password": "Amirov123",
+        "major": "programming",
+        "profileImage": "test.jpeg"
+      }
+    ],
+    "students": [
+      {
+        "id": "1",
+        "fullName": "Ali Jalilov",
+        "email": "ali.jalilov@code.edu.az",
+        "username": "AliAliyev",
+        "password": "Aliyev123",
+        "profileImage": "test.jpeg",
+        "grades": [
+          {
+            "taskId": "1",
+            "grade": 70
+          }
+        ]
+      }
+    ],
+    "tasks": [
+      {
+        "id": "1",
+        "title": "local storage",
+        "description": "lorem ipsum dolor",
+        "topic": "REACT",
+        "deadline": "Today at 5:00 PM",
+        "createdAt": "2024-05-09 00:04:00",
+        "teacherId": "1",
+        "assignments": [
+          {
+            "studentId": "1",
+            "taskUrl": "https://github.com/KananAmir/AZMP101-JS"
+          }
+        ]
+      }
+    ]
+  }
+  
