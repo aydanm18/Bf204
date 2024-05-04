@@ -5,11 +5,21 @@ import Login from './components/Login'
 import Register from './components/Register'
 
 function App() {
-  const [form,setForm]=useState("register")
+  const [form, setForm] = useState("register");
+  // const [clasroom, setClasroom] = useState(null);
+   
+  // function handleLogin(){
+  // setForm(null);
+  // setClasroom('Classe');
+  // }
+
   return (
     <>
-     <Login/>
-     <Register/>
+      {form == 'register' ? (
+        <Register form={form} setForm={setForm} />
+      ) : (
+        <Login form={form} setForm={setForm} />
+      )}
     </>
   )
 }

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,32 +13,26 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+function StudentLogin({ setLoginPage, setForm }) {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
 
-// TODO remove, this demo shouldn't need to reset the theme.
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-const defaultTheme = createTheme();
-
- function StudentLogin({loginPage,setLoginPage}) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    console.log(formData); //
   };
+
+  const defaultTheme = createTheme();
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -56,7 +50,7 @@ const defaultTheme = createTheme();
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-          Student Login
+            Student Login
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -68,6 +62,8 @@ const defaultTheme = createTheme();
               name="email"
               autoComplete="email"
               autoFocus
+              value={formData.email}
+              onChange={handleChange}
             />
             <TextField
               margin="normal"
@@ -78,6 +74,8 @@ const defaultTheme = createTheme();
               type="password"
               id="password"
               autoComplete="current-password"
+              value={formData.password}
+              onChange={handleChange}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -93,21 +91,21 @@ const defaultTheme = createTheme();
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2" onClick={()=>{setLoginPage("teacher")}}>
+                {/* <Link href="#" variant="body2" onClick={() => setLoginPage('teacher')}>
                   Sign in Teacher
-                </Link>
+                </Link> */}
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" >
+                <Link href="#" variant="body2" onClick={() => setForm('register')}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
   );
 }
-export default StudentLogin
+
+export default StudentLogin;

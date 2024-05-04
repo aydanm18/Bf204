@@ -1,7 +1,7 @@
 
 class Student {
     constructor( fullName, username, email, password, profileImage) {
-        this.id = nanoid();
+        this.id = new Date();
         this.fullName = fullName;
         this.username = username;
         this.email = email;
@@ -18,3 +18,4 @@ class Student {
         return sum / grades.length;
     }
 }
+export default Student

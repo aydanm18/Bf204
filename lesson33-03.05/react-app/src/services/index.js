@@ -2,7 +2,7 @@
 import axios from "axios";
 import { BASE_URL } from "./constants";
 
-async function getAll(endpoint) {
+ export async function getAll(endpoint) {
   try {
     const response = await axios.get(BASE_URL + endpoint);
     return response;
@@ -11,7 +11,7 @@ async function getAll(endpoint) {
   }
 }
 
-async function getOne(endpoint, id) {
+export async function getOne(endpoint, id) {
   try {
     const response = await axios.get(BASE_URL + endpoint + `/${id}`);
     return response;
@@ -20,7 +20,7 @@ async function getOne(endpoint, id) {
   }
 }
 
-async function deleteOne(endpoint, id) {
+export async function deleteOne(endpoint, id) {
   try {
     const response = await axios.delete(BASE_URL + endpoint + `/${id}`);
     return response;
@@ -29,7 +29,7 @@ async function deleteOne(endpoint, id) {
   }
 }
 
-async function put(endpoint, id, payload) {
+export async function put(endpoint, id, payload) {
   try {
     const response = await axios.put(BASE_URL + endpoint + `/${id}`, payload);
     return response;
@@ -38,7 +38,7 @@ async function put(endpoint, id, payload) {
   }
 }
 
-async function patch(endpoint, id, payload) {
+export async function patch(endpoint, id, payload) {
   try {
     const response = await axios.patch(BASE_URL + endpoint + `/${id}`, payload);
     return response;
@@ -47,7 +47,7 @@ async function patch(endpoint, id, payload) {
   }
 }
 
-async function post(endpoint, payload) {
+export async function post(endpoint, payload) {
   try {
     const response = await axios.post(BASE_URL + endpoint, payload);
     return response;
@@ -57,13 +57,3 @@ async function post(endpoint, payload) {
 }
 
 
-const controller = {
-    getAll: getAll,
-    getOne: getOne,
-    delete: deleteOne,
-    post: post,
-    put: put,
-    patch: patch
-}
-
-export default controller;

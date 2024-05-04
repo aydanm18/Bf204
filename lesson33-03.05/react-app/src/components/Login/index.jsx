@@ -1,22 +1,22 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react'
 // import StudentLogin from './StudentLogin'
 // import TeacherLogin from './TeacherLogin'
 
-// const Login = () => {
+// const Login = ({form,setForm}) => {
 //     const [loginPage, setLoginPage] = useState("student")
 //     return (
 //         <>
 //             {loginPage == "student" ? (
-//                 <StudentLogin loginPage={loginPage} setLoginPage={setLoginPage}/>
+//                 <StudentLogin loginPage={loginPage} setLoginPage={setLoginPage}  form={form} setForm={setForm}/>
 //             ) : (
-//                 <TeacherLogin loginPage={loginPage} setLoginPage={setLoginPage} />
+//                 <TeacherLogin loginPage={loginPage} setLoginPage={setLoginPage} form={form} setForm={setForm} />
 //             )}
 //         </>
 //     )
 // }
 
 // export default Login
-import * as React from 'react';
+// import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -58,8 +58,9 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function Login({setForm}) {
   const [value, setValue] = React.useState(0);
+  const [loginPage, setLoginPage] = useState("student")
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -75,10 +76,10 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <StudentLogin/>
+        <StudentLogin loginPage={loginPage} setLoginPage={setLoginPage} setForm={setForm}/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-      <TeacherLogin/>
+      <TeacherLogin loginPage={loginPage} setLoginPage={setLoginPage} setForm={setForm}/>
       </CustomTabPanel>
      
     </Box>

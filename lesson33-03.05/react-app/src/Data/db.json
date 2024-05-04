@@ -1,47 +1,332 @@
 {
-    "teachers": [
-      {
-        "id": "1",
-        "fullName": "Kanan Amirov",
-        "email": "kanan.amirov@code.edu.az",
-        "username": "KananAmir",
-        "password": "Amirov123",
-        "major": "programming",
-        "profileImage": "test.jpeg"
-      }
-    ],
-    "students": [
-      {
-        "id": "1",
-        "fullName": "Ali Jalilov",
-        "email": "ali.jalilov@code.edu.az",
-        "username": "AliAliyev",
-        "password": "Aliyev123",
-        "profileImage": "test.jpeg",
-        "grades": [
-          {
-            "taskId": "1",
-            "grade": 70
-          }
-        ]
-      }
-    ],
-    "tasks": [
-      {
-        "id": "1",
-        "title": "local storage",
-        "description": "lorem ipsum dolor",
-        "topic": "REACT",
-        "deadline": "Today at 5:00 PM",
-        "createdAt": "2024-05-09 00:04:00",
-        "teacherId": "1",
-        "assignments": [
-          {
-            "studentId": "1",
-            "taskUrl": "https://github.com/KananAmir/AZMP101-JS"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "teachers": [
+    {
+      "id": "1",
+      "fullName": "Kanan Amirov",
+      "email": "kanan.amirov@code.edu.az",
+      "username": "KananAmir",
+      "password": "Amirov123",
+      "major": "programming",
+      "profileImage": "test.jpeg"
+    },
+    {
+      "id": "edea",
+      "fullName": "Lionel",
+      "username": "nudorab",
+      "emailAddressT": "patytixez@mailinator.com",
+      "passwordT": "Pa$$w0rd!"
+    },
+    {
+      "id": "2024-05-04T22:08:33.033Z",
+      "fullName": "Rooney Medina",
+      "username": "mulabocaja",
+      "email": "tyvyma@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Veniam laboris dign",
+      "profileImage": "Sunt amet exercitat"
+    },
+    {
+      "id": "2024-05-04T22:11:59.207Z",
+      "fullName": "aydan",
+      "username": "xifoxovagu",
+      "email": "rasexeguvi@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Labore in duis molli",
+      "profileImage": "Consequuntur quia su"
+    },
+    {
+      "id": "2024-05-04T22:12:41.283Z",
+      "fullName": "Rashad Barr",
+      "username": "ragawiqoke",
+      "email": "hydereze@mailinator.com",
+      "password": "Aaaaa1",
+      "major": "Est est eum enim lau",
+      "profileImage": "Et autem quibusdam n"
+    },
+    {
+      "id": "2024-05-04T22:56:17.395Z",
+      "fullName": "Irma Mckay",
+      "username": "woweheciny",
+      "email": "wepawyguk@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Aliquid officiis har",
+      "profileImage": "Quis sed praesentium"
+    },
+    {
+      "id": "2024-05-04T22:57:04.127Z",
+      "fullName": "Britanney Hess",
+      "username": "pirave",
+      "email": "fagerifyb@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Mollitia sequi sunt ",
+      "profileImage": "Neque perspiciatis "
+    },
+    {
+      "id": "2024-05-04T23:27:26.346Z",
+      "fullName": "Beverly Huffman",
+      "username": "dehapy",
+      "email": "mylowug@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Accusamus perferendi",
+      "profileImage": "Explicabo Totam atq"
+    },
+    {
+      "id": "2024-05-04T23:45:30.552Z",
+      "fullName": "Aydan",
+      "username": "Babayeva",
+      "email": "kelyz@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Dolores amet repreh",
+      "profileImage": "Magnam dignissimos i"
+    },
+    {
+      "id": "2024-05-04T23:45:41.641Z",
+      "fullName": "Aydan",
+      "username": "Babayeva",
+      "email": "kelyz@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Dolores amet repreh",
+      "profileImage": "Magnam dignissimos i"
+    },
+    {
+      "id": "2024-05-04T23:45:55.513Z",
+      "fullName": "Bradley Horton",
+      "username": "vosuquwevy",
+      "email": "dogixinala@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Laborum autem quae i",
+      "profileImage": "Vero ut et quasi aut"
+    },
+    {
+      "id": "2024-05-04T23:47:18.058Z",
+      "fullName": "Reese Mccormick",
+      "username": "tifuved",
+      "email": "xyva@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Doloremque expedita ",
+      "profileImage": "Facere ut sapiente m"
+    },
+    {
+      "id": "2024-05-04T23:49:13.369Z",
+      "fullName": "Aydan",
+      "username": "qitoledu",
+      "email": "babayevaaydan18@gmail.com",
+      "password": "Pa$$w0rd!",
+      "major": "Assumenda esse sit ",
+      "profileImage": "Culpa ut quos accusa"
+    },
+    {
+      "id": "2024-05-04T23:49:25.573Z",
+      "fullName": "Aydan",
+      "username": "qitoledu",
+      "email": "babayevaydin18@gmail.com",
+      "password": "Pa$$w0rd!",
+      "major": "Assumenda esse sit ",
+      "profileImage": "Culpa ut quos accusa"
+    },
+    {
+      "id": "2024-05-04T23:49:33.149Z",
+      "fullName": "Aydin",
+      "username": "qitoledu",
+      "email": "babayevaydin18@gmail.com",
+      "password": "Pa$$w0rd!",
+      "major": "Assumenda esse sit ",
+      "profileImage": "Culpa ut quos accusa"
+    },
+    {
+      "id": "2024-05-04T23:49:35.046Z",
+      "fullName": "Aydin",
+      "username": "qitoledu",
+      "email": "babayevaydin18@gmail.com",
+      "password": "Pa$$w0rd!",
+      "major": "Assumenda esse sit ",
+      "profileImage": "Culpa ut quos accusa"
+    },
+    {
+      "id": "2024-05-04T23:49:47.137Z",
+      "fullName": "Lee Donaldson",
+      "username": "loqezak",
+      "email": "sisoxuty@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "major": "Ad rerum doloremque ",
+      "profileImage": "Rerum quibusdam dolo"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "fullName": "Ali Jalilov",
+      "email": "ali.jalilov@code.edu.az",
+      "username": "AliAliyev",
+      "password": "Aliyev123",
+      "profileImage": "test.jpeg",
+      "grades": [
+        {
+          "taskId": "1",
+          "grade": 70
+        }
+      ]
+    },
+    {
+      "id": "774f",
+      "firstName": "Aydan",
+      "lastName": "Babayeva",
+      "emailAddress": "qyrotuni@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "79d9",
+      "firstName": "Lyle",
+      "lastName": "Collier",
+      "emailAddress": "vysubuc@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "df25",
+      "firstName": "Brandon",
+      "lastName": "Leach",
+      "emailAddress": "zamos@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "c689",
+      "firstName": "Aydan",
+      "lastName": "Babayeva",
+      "emailAddress": "babayevaaydan18@gmail.com",
+      "password": "Aydan18"
+    },
+    {
+      "id": "5f2d",
+      "firstName": "",
+      "lastName": "",
+      "emailAddress": "",
+      "password": "123"
+    },
+    {
+      "id": "8a77",
+      "firstName": "Aydan",
+      "lastName": "Babayeva",
+      "emailAddress": "babayevaaydan18@gmail.com",
+      "password": "Aydan123"
+    },
+    {
+      "id": "571a",
+      "fullName": "Ainsley Leonard",
+      "username": "pikipo",
+      "emailAddress": "sidaline@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "d08e",
+      "fullName": "Wynne Fuentes",
+      "username": "xynavuxyt",
+      "emailAddress": "kajytatas@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "3570",
+      "fullName": "Leslie Rowe",
+      "username": "lepilacu",
+      "emailAddress": "daluqeky@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "2024-05-04T23:20:10.055Z",
+      "fullName": "Brett Kim",
+      "username": "mituvumut",
+      "email": "rytobifo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "grades": [],
+      "profileImage": "Animi sed non in la"
+    },
+    {
+      "id": "2024-05-04T23:27:09.181Z",
+      "fullName": "Hiroko Ferrell",
+      "username": "mykiwe",
+      "email": "jimyl@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "grades": [],
+      "profileImage": "Quis exercitation si"
+    },
+    {
+      "id": "2024-05-04T23:38:32.430Z",
+      "fullName": "Aydan",
+      "username": "Babayeva",
+      "email": "babayevaaydan18@gmail.com",
+      "password": "Aydan18",
+      "grades": [],
+      "profileImage": "aaaaaaaa"
+    },
+    {
+      "id": "2024-05-04T23:41:49.619Z",
+      "fullName": "Aydan",
+      "username": "Babayeva",
+      "email": "babayevaaydan18@gmail.com",
+      "password": "Aydan18",
+      "grades": [],
+      "profileImage": "aaaaaaaa"
+    },
+    {
+      "id": "2024-05-04T23:42:09.718Z",
+      "fullName": "Aydan",
+      "username": "Babayeva",
+      "email": "babayevaaydan18@gmail.com",
+      "password": "Aydan18",
+      "grades": [],
+      "profileImage": "aaaaaaaa"
+    },
+    {
+      "id": "2024-05-04T23:42:20.654Z",
+      "fullName": "aydan",
+      "username": "Babayeva",
+      "email": "babayevaaydan18@gmail.com",
+      "password": "Aydan18",
+      "grades": [],
+      "profileImage": "aaaaaaaa"
+    },
+    {
+      "id": "2024-05-04T23:42:28.930Z",
+      "fullName": "aydan",
+      "username": "kkkkkkk",
+      "email": "babayevaaydan18@gmail.com",
+      "password": "Aydan18",
+      "grades": [],
+      "profileImage": "aaaaaaaa"
+    },
+    {
+      "id": "2024-05-04T23:51:05.341Z",
+      "fullName": "Seth Schroeder",
+      "username": "tuviduwaba",
+      "email": "cirudefer@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "grades": [],
+      "profileImage": "Est cillum aute volu"
+    },
+    {
+      "id": "2024-05-04T23:51:08.156Z",
+      "fullName": "Seth Schroeder",
+      "username": "tuviduwaba",
+      "email": "cirudefer@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "grades": [],
+      "profileImage": "Est cillum aute volu"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "local storage",
+      "description": "lorem ipsum dolor",
+      "topic": "REACT",
+      "deadline": "Today at 5:00 PM",
+      "createdAt": "2024-05-09 00:04:00",
+      "teacherId": "1",
+      "assignments": [
+        {
+          "studentId": "1",
+          "taskUrl": "https://github.com/KananAmir/AZMP101-JS"
+        }
+      ]
+    }
+  ]
+}

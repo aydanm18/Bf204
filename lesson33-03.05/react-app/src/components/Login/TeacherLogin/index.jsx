@@ -30,7 +30,7 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
- function TeacherLogin({loginPage,setLoginPage}) {
+ function TeacherLogin({setLoginPage,setForm}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -93,12 +93,12 @@ const defaultTheme = createTheme();
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2" onClick={()=>{setLoginPage("student")}}>
+                {/* <Link href="#" variant="body2" onClick={()=>{setLoginPage("student")}}>
                   Sign in Student
-                </Link>
+                </Link> */}
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" onClick={()=>{setForm("register")}}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

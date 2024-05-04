@@ -10,3 +10,5 @@ class Task {
         this.assignments = [];
     }
 }
+
+export default Task
