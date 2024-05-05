@@ -18,7 +18,7 @@ import Student from '../../../classes/Student';
 
 
 
-function StudentRegister({ setRegisterPage, setForm }) {
+function StudentRegister({setForm }) {
 
   const [student, setStudent] = useState({ fullName: "", email: "", username: "", password: "", profileImage: "" });
   if (!localStorage.getItem("students")) {
@@ -79,18 +79,18 @@ function StudentRegister({ setRegisterPage, setForm }) {
       await post('/students', studentt);
       const localStudent = JSON.parse(localStorage.getItem("students"));
       localStudent.push(student);
-      const existEmail = localStudent.find((existStudent) => existStudent.email === student.email);
-      const existUsername = localStudent.find((existStudent) => existStudent.username === student.username);
-      if (existEmail || existUsername) {
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: "Email and Username already exists!",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        return;
-      }
+      // const existEmail = localStudent.find((existStudent) => existStudent.email === student.email);
+      // const existUsername = localStudent.find((existStudent) => existStudent.username === student.username);
+      // if (existEmail || existUsername) {
+      //   Swal.fire({
+      //     position: "top-end",
+      //     icon: "error",
+      //     title: "Email and Username already exists!",
+      //     showConfirmButton: false,
+      //     timer: 1500
+      //   });
+      //   return;
+      // }
       localStorage.setItem("students", JSON.stringify(localStudent));
       setStudent(
         {

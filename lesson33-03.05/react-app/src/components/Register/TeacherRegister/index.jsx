@@ -18,7 +18,7 @@ import Teacher from '../../../classes/Teacher';
 
 
 
-function TeacherRegister({ setRegisterPage, setForm }) {
+function TeacherRegister({setForm }) {
  
   const [teacher, setTeacher] = useState({ fullName: "", email: "", username: "", password: "", major: "", profileImage: "" });
   if (!localStorage.getItem("teachers")) {
@@ -79,18 +79,18 @@ function TeacherRegister({ setRegisterPage, setForm }) {
       await post('/teachers', teacherr);
       const localTeacher = JSON.parse(localStorage.getItem("teachers"));
       localTeacher.push(teacher);
-      const existEmail = localTeacher.find((existTeacher) => existTeacher.email === teacher.email);
-      const existUsername = localTeacher.find((existTeacher) => existTeacher.username === teacher.username);
-      if (existEmail || existUsername) {
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: "Email and Username already exists!",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        return;
-      }
+      // const existEmail = localTeacher.find((existTeacher) => existTeacher.email === teacher.email);
+      // const existUsername = localTeacher.find((existTeacher) => existTeacher.username === teacher.username);
+      // if (existEmail || existUsername) {
+      //   Swal.fire({
+      //     position: "top-end",
+      //     icon: "error",
+      //     title: "Email and Username already exists!",
+      //     showConfirmButton: false,
+      //     timer: 1500
+      //   });
+      //   return;
+      // }
       localStorage.setItem("teachers", JSON.stringify(localTeacher));
       setTeacher(
         {

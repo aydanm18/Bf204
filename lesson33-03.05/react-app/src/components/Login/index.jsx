@@ -58,7 +58,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Login({setForm}) {
+export default function Login({ setForm, setClassroom }) {
   const [value, setValue] = React.useState(0);
   const [loginPage, setLoginPage] = useState("student")
 
@@ -68,20 +68,20 @@ export default function Login({setForm}) {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' , }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Student Login" {...a11yProps(0)} />
           <Tab label="Teacher Login" {...a11yProps(1)} />
-         
+
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <StudentLogin loginPage={loginPage} setLoginPage={setLoginPage} setForm={setForm}/>
+        <StudentLogin loginPage={loginPage} setLoginPage={setLoginPage} setForm={setForm} setClassroom={setClassroom} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-      <TeacherLogin loginPage={loginPage} setLoginPage={setLoginPage} setForm={setForm}/>
+        <TeacherLogin loginPage={loginPage} setLoginPage={setLoginPage} setForm={setForm} setClassroom={setClassroom} />
       </CustomTabPanel>
-     
+
     </Box>
   );
 }

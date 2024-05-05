@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,6 +11,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Swal from 'sweetalert2';
+import { useState } from 'react';
 
 function Copyright(props) {
   return (
@@ -26,18 +27,35 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
- function TeacherLogin({setLoginPage,setForm}) {
+function TeacherLogin({ setForm, setClassroom }) {
+  const [teacher, setTeacher] = useState({ password: "", email: "" });
+  const localTeachers = JSON.parse(localStorage.getItem("teachers")) || [];
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const check = localTeachers.find((x) => x.password === teacher.password && x.email === teacher.email);
+    
+    if (check) {
+      localStorage.setItem("currentUser", JSON.stringify({ id: check.id, isTeacher: true }));
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: 'Teacher Signed In Successfully!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      setClassroom('classroom');
+    } else {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: 'Username or Password is incorrect!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
   };
 
   return (
@@ -56,7 +74,7 @@ const defaultTheme = createTheme();
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-          Teacher Login
+            Teacher Login
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -68,6 +86,8 @@ const defaultTheme = createTheme();
               name="email"
               autoComplete="email"
               autoFocus
+              value={teacher.email}
+              onChange={(e) => setTeacher({ ...teacher, email: e.target.value })}
             />
             <TextField
               margin="normal"
@@ -78,6 +98,8 @@ const defaultTheme = createTheme();
               type="password"
               id="password"
               autoComplete="current-password"
+              value={teacher.password}
+              onChange={(e) => setTeacher({ ...teacher, password: e.target.value })}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -93,12 +115,9 @@ const defaultTheme = createTheme();
             </Button>
             <Grid container>
               <Grid item xs>
-                {/* <Link href="#" variant="body2" onClick={()=>{setLoginPage("student")}}>
-                  Sign in Student
-                </Link> */}
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" onClick={()=>{setForm("register")}}>
+                <Link href="#" variant="body2" onClick={() => { setForm("register") }}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
@@ -110,4 +129,5 @@ const defaultTheme = createTheme();
     </ThemeProvider>
   );
 }
-export default TeacherLogin
+
+export default TeacherLogin;

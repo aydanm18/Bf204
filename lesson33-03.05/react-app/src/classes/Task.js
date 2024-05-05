@@ -1,6 +1,6 @@
 class Task {
     constructor( title, description, topic, deadline, teacherId) {
-        this.id =  nanoid();
+        this.id =  new Date();
         this.title = title;
         this.description = description;
         this.topic = topic;

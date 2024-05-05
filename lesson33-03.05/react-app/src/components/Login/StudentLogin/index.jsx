@@ -12,27 +12,45 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Swal from 'sweetalert2';
+const defaultTheme = createTheme();
 
-function StudentLogin({ setLoginPage, setForm }) {
-  const [formData, setFormData] = useState({
+
+
+function StudentLogin({ setForm, setClassroom }) {
+  const [student, setStudent] = useState({
     email: '',
     password: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const localStudent = JSON.parse(localStorage.getItem("students")) || [];
+  const check = localStudent.find((x) => x.password === student.password && x.email === student.email);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData); //
+    if (check) {
+      localStorage.setItem("students", JSON.stringify(localStudent));
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: 'Student Signed In Successfully!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      setClassroom('classroom')
+    } else {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: 'Username or Password is incorrect!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+
   };
 
-  const defaultTheme = createTheme();
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -62,8 +80,8 @@ function StudentLogin({ setLoginPage, setForm }) {
               name="email"
               autoComplete="email"
               autoFocus
-              value={formData.email}
-              onChange={handleChange}
+              value={student.email}
+              onChange={(e) => setStudent({ ...student, email: e.target.value })}
             />
             <TextField
               margin="normal"
@@ -74,8 +92,9 @@ function StudentLogin({ setLoginPage, setForm }) {
               type="password"
               id="password"
               autoComplete="current-password"
-              value={formData.password}
-              onChange={handleChange}
+              value={student.password}
+              onChange={(e) => setStudent({ ...student, password: e.target.value })}
+
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -90,11 +109,7 @@ function StudentLogin({ setLoginPage, setForm }) {
               Sign In
             </Button>
             <Grid container>
-              <Grid item xs>
-                {/* <Link href="#" variant="body2" onClick={() => setLoginPage('teacher')}>
-                  Sign in Teacher
-                </Link> */}
-              </Grid>
+
               <Grid item>
                 <Link href="#" variant="body2" onClick={() => setForm('register')}>
                   {"Don't have an account? Sign Up"}
